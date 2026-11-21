@@ -1,1 +1,188 @@
-/* css geral*/
+/* CSS GERAL (Atualizado: Jovem, Moderno & Tech) */
+
+
+:root,
+/* tema claro */
+[data-bs-theme="light"] {
+  --brand-primary: #6d28d9;       
+  --brand-light: #8b5cf6;       
+  --brand-accent: #06b6d4;        
+  --brand-glow: rgba(109, 40, 217, 0.28);
+  
+  --nav-glass: rgba(255, 255, 255, 0.78);
+  --card-surface: #ffffff;
+  --card-border: rgba(109, 40, 217, 0.14);
+}
+/* tema escuro */
+[data-bs-theme="dark"] {
+  --brand-primary: #8b5cf6;       
+  --brand-light: #a78bfa;
+  --brand-accent: #22d3ee;
+  --brand-glow: rgba(139, 92, 246, 0.45);
+
+  --bs-body-bg: #0b0714;          
+  --bs-tertiary-bg: #130d24;      
+  --nav-glass: rgba(11, 7, 20, 0.78);
+  --card-surface: rgba(24, 16, 44, 0.75);
+  --card-border: rgba(139, 92, 246, 0.25);
+}
+
+
+/* 1. fontes */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: "Space Grotesk", Arial, sans-serif;
+  letter-spacing: -0.03em; /* Mais compacto */
+}
+
+
+/* 2. Barra de navegação */
+.site-nav {
+  background-color: var(--nav-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--card-border);
+  transition: background-color 0.3s ease;
+}
+
+.site-nav .nav-link {
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.45rem 0.85rem !important;
+  transition: all 0.2s ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+  color: var(--brand-primary) !important;
+  background-color: rgba(139, 92, 246, 0.12);
+}
+/* 3.Espaçamento para o conteúdo principal */
+.site-main {
+  padding-top: 84px;
+}
+
+
+/* 4.  */
+.brand-mark {
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 4px 9px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 3px 12px var(--brand-glow);
+}
+
+.text-brand {
+  color: var(--brand-primary) !important;
+}
+
+/* Botão principal com brilho */
+.btn-brand {
+  background: linear-gradient(135deg, var(--brand-primary), #4f46e5);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 0.6rem 1.4rem;
+  box-shadow: 0 4px 15px var(--brand-glow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.btn-brand:hover, .btn-brand:focus {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--brand-glow);
+  filter: brightness(1.08);
+}
+
+/* Etiqueta moderna */
+.badge-soft {
+  background-color: rgba(139, 92, 246, 0.14);
+  color: var(--brand-primary);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 999px;
+  padding: 0.35em 0.85em;
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+
+/* 5. Seção Hero */
+.hero, .page-hero {
+  background: 
+    radial-gradient(circle at 85% 10%, var(--brand-glow), transparent 50%),
+    radial-gradient(circle at 15% 80%, rgba(34, 211, 238, 0.12), transparent 45%);
+  position: relative;
+}
+
+.hero-text {
+  max-width: 640px;
+}
+
+
+/* 6. cards */
+.course-card {
+  background-color: var(--card-surface);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  overflow: hidden; /* Garante que a imagem respeita os cantos arredondados */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--brand-light);
+  box-shadow: 0 14px 30px -10px var(--brand-glow);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Efeito zoom na imagem ao passar o mouse  */
+.course-card:hover .card-img-top {
+  transform: scale(1.04);
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--brand-primary);
+  padding: 2px;
+}
+
+
+/* 7. Rodapé */
+.site-footer {
+  background-color: var(--bs-tertiary-bg);
+  border-top: 1px solid var(--card-border);
+}
+
+.site-footer a {
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.site-footer a:hover {
+  color: var(--brand-primary) !important;
+  transform: translateX(3px);
+}
+
+/* Destaque  */
+.plan-featured {
+  border: 2px solid var(--brand-primary) !important;
+  box-shadow: 0 10px 30px -8px var(--brand-glow);
+  position: relative;
+}
