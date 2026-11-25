@@ -37,10 +37,130 @@
     </nav>
   </header>
 
-  <!-- Conteúdo Principal -->
-  <main class="site-main container py-5">
-    <h1 class="fw-bold mb-4">Notícias & Eventos</h1>
-    <p class="text-body-secondary">Estrutura inicial da página de notícias da Kora Tech.</p>
+  <!-- Conteúdo Principal com espaçamento de topo reforçado (pt-5 mt-5) para evitar sobreposição da Navbar fixed-top -->
+  <main class="site-main container pb-5 pt-5 mt-5">
+    <!-- Título Principal (Semântica: 1 único <h1>) -->
+    <header class="mb-4 text-center">
+      <h1 class="fw-bold display-5">Notícias & Eventos</h1>
+      <p class="text-body-secondary lead">Acompanhe os destaques, bootcamps e artigos da Kora Tech.</p>
+    </header>
+
+    <!-- COMPONENTE 1 BOOTSTRAP: Carrossel de Destaques -->
+    <section class="mb-5" aria-label="Notícias em Destaque">
+      <div id="newsCarousel" class="carousel slide rounded-4 overflow-hidden shadow" data-bs-ride="carousel">
+        
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: Bootcamp Full-Stack"></button>
+          <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2: Hackathon 2026"></button>
+          <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="Slide 3: Workshop IA Generativa"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" style="max-height: 420px; object-fit: cover;" alt="Estudantes a programar num bootcamp intensivo">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-3 rounded-3 mb-4">
+              <h2 class="h4 fw-bold">Inscrições Abertas: Bootcamp Full-Stack 2027</h2>
+              <p class="mb-0">Formação intensiva de 6 meses com foco em HTML, CSS, JavaScript e React.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" style="max-height: 420px; object-fit: cover;" alt="Equipa a colaborar durante um hackathon">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-3 rounded-3 mb-4">
+              <h2 class="h4 fw-bold">Hackathon Kora Code 2026</h2>
+              <p class="mb-0">48 horas de desenvolvimento de projetos com mentoria de empresas parceiras.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" style="max-height: 420px; object-fit: cover;" alt="Orador num workshop de tecnologia">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-3 rounded-3 mb-4">
+              <h2 class="h4 fw-bold">Workshop: Inteligência Artificial na Prática</h2>
+              <p class="mb-0">Sessão gratuita aberta à comunidade sobre integração de IA em aplicações web.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botões de Controlo Anterior / Seguinte -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Seguinte</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- COMPONENTE 2 BOOTSTRAP: Grelha de Cards de Notícias -->
+    <section class="mb-5" aria-labelledby="sec-artigos">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 id="sec-artigos" class="h3 fw-bold">Todas as Notícias</h2>
+        <span class="badge bg-primary fs-6">Recentes</span>
+      </div>
+
+      <div class="row g-4">
+        <!-- Notícia 1 -->
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Estudantes a programar num bootcamp">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-success">Bootcamp</span>
+                <small class="text-body-secondary ms-2">20 Nov 2026</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Candidaturas Abertas para 2027</h3>
+              <p class="card-text text-body-secondary flex-grow-1">
+                Garante a tua vaga no programa intensivo de desenvolvimento web da Kora Tech.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm mt-3 w-100">Ler Notícia</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Notícia 2 -->
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Workshop de Inteligência Artificial">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-warning text-dark">Workshop</span>
+                <small class="text-body-secondary ms-2">15 Nov 2026</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Workshop de IA Generativa</h3>
+              <p class="card-text text-body-secondary flex-grow-1">
+                Descobre como usar ferramentas de IA para acelerar a escrita de código.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm mt-3 w-100">Ler Notícia</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Notícia 3 -->
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Equipa a colaborar num projeto">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-info text-dark">Parceria</span>
+                <small class="text-body-secondary ms-2">10 Nov 2026</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Novos Acordos de Estágio</h3>
+              <p class="card-text text-body-secondary flex-grow-1">
+                Parcerias com empresas do setor tecnológico para integrar formandos no mercado.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm mt-3 w-100">Ler Notícia</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <!-- Rodapé -->
