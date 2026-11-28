@@ -1,0 +1,154 @@
+<!doctype html>
+<!--CMT alterei para pt-->
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursos</title>
+    <meta
+      name="description"
+      content="Kora Tech: 8 percursos para iniciantes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--pre-connect https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontes -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../css/global.css" rel="stylesheet" />
+    <!--CMT alternativa nos requisitos do enunciado: a avaliar  -->
+  </head>
+
+  <body>
+     <!-- Cabeçalho / Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="home.html"><span class="brand-mark">&lt;/&gt;</span> Kora Tech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="home.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogue.html">Cursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">Notícias</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" aria-current="page">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link active" href="faq.html">Perguntas Frequentes</a></li>
+            <li class="nav-item ms-lg-2 my-2 my-lg-0">
+              <button type="button" id="themeToggle" class="btn btn-outline-secondary btn-sm rounded-pill px-3" aria-label="Alternar modo escuro">🌙 Escuro</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+   <main>
+      <section class="py-5" id="faq" aria-labelledby="faq-titulo">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h1 id="faq-titulo" class="fw-bold text-center mb-3">Perguntas Frequentes</h1>
+              <p class="text-body-secondary text-center mb-5">
+                Esclareça as principais dúvidas sobre os 8 percursos para iniciantes da Kora Tech.
+              </p>
+
+              <div class="accordion" id="accordionKoraFaq">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="" aria-controls="faqCollapse1">
+                      Preciso de experiência prévia para começar os percursos?
+                    </button>
+                  </h2>
+                  <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#accordionKoraFaq">
+                    <div class="accordion-body">
+                      Não. Os 8 percursos foram desenhados para iniciantes, começando pelos fundamentos até à prática guiada.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                      Como funcionam os 8 percursos de aprendizagem?
+                    </button>
+                  </h2>
+                  <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#accordionKoraFaq">
+                    <div class="accordion-body">
+                      Cada percurso organiza módulos passo a passo com exercícios e projetos práticos para consolidar o que aprende.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                      Posso estudar ao meu próprio ritmo?
+                    </button>
+                  </h2>
+                  <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#accordionKoraFaq">
+                    <div class="accordion-body">
+                      Sim. Pode avançar conforme a sua disponibilidade semanal e rever as aulas sempre que precisar.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                      Como posso falar com a equipa da Kora Tech?
+                    </button>
+                  </h2>
+                  <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#accordionKoraFaq">
+                    <div class="accordion-body">
+                      Pode enviar mensagem através da página de <a href="contact.html" class="text-decoration-none">Contacto</a> para tirar dúvidas sobre cursos ou inscrições.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Rodapé -->
+  <footer class="site-footer py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <section class="col-12 col-md-5">
+          <h2 class="h5 fw-bold">Kora Tech</h2>
+          <p class="text-body-secondary mb-0">Escola de cursos de tecnologia.</p>
+        </section>
+        <nav class="col-6 col-md-3" aria-label="Páginas">
+          <h2 class="h6 fw-bold">Páginas</h2>
+          <ul class="list-unstyled">
+            <li><a class="link-secondary text-decoration-none" href="home.html">Início</a></li>
+            <li><a class="link-secondary text-decoration-none" href="catalogue.html">Cursos</a></li>
+            <li><a class="link-secondary text-decoration-none" href="about.html">Sobre</a></li>
+            <li><a class="link-secondary text-decoration-none" href="news.html">Notícias</a></li>
+            <li><a class="link-secondary text-decoration-none" href="contact.html">Contacto</a></li>
+            <li><a class="link-secondary text-decoration-none" href="faq.html">Perguntas Frequentes</a></li>
+          </ul>
+        </nav>
+        <section class="col-6 col-md-4">
+          <h2 class="h6 fw-bold">Redes sociais</h2>
+          <ul class="list-unstyled d-flex flex-wrap gap-3">
+            <li><a class="link-secondary" href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a class="link-secondary" href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a class="link-secondary" href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="text-center text-body-secondary small mt-4 mb-0">© 2026 Kora Tech. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/home.js"></script>
+  <script src="../js/main.js"></script>
+  </body>
